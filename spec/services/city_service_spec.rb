@@ -12,7 +12,6 @@ describe CityService do
         city = "cincinatti", 
         state = "oh"
         search = CityService.new.find_city_weather(city, state)
-        require 'pry';binding.pry
         expect(search.first).to be_a Hash
       end
     end
