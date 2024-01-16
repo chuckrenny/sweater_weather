@@ -7,5 +7,8 @@ Rails.application.routes.draw do
     namespace :v0 do
       resources :forecasts, only: [:show] 
     end
+    namespace :v1 do
+      get 'book-search', to: 'books#search'
+    end
   end
 end
