@@ -75,7 +75,7 @@ VCR.configure do |config|
   config.hook_into :webmock
   config.filter_sensitive_data("<MAPQUEST_API_KEY>") { Rails.application.credentials.mapquest[:key] }
   config.filter_sensitive_data("<WEATHER_READ_KEY>") { Rails.application.credentials.weather[:key] }
-  config.default_cassette_options = {re_record_interval: 1.days, allow_playback_repeats: true}
+  config.default_cassette_options = {re_record_interval: 365.days, allow_playback_repeats: true}
   config.configure_rspec_metadata!
 end
 

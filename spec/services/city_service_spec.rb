@@ -8,8 +8,8 @@ describe CityService do
         expect(service.conn).to be_instance_of Faraday::Connection
       end
 
-      it "returns parsed results", :vcr do
-        city = "cincinatti", 
+      it "returns city results", :vcr do
+        city = "cincinatti"
         state = "oh"
         search = CityService.new.find_city_weather(city, state)
         expect(search.first).to be_a Hash
