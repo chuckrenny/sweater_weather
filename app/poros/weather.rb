@@ -2,7 +2,6 @@ class Weather
   attr_reader :id, :type, :attributes
 
   def initialize(weather_data)
-    # require 'pry';binding.pry
     @id = 'null'
     @type = 'forecast'
     @attributes = {
